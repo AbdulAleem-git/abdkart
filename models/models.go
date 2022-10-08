@@ -15,12 +15,12 @@ type User struct {
 	Email           *string            `json:"email" validate:"required"`
 	Phone           *string            `json:"phone" validate:"required"`
 	Token           *string            `json:"token"`
-	Refresh_Toke    *string            `json:"refresh_token"`
+	Refresh_Token   *string            `json:"refresh_token"`
 	Created_At      time.Time          `json:"created_at"`
 	Updated_At      time.Time          `json:"updated_at"`
 	User_Id         string             `json:"user_id"`
 	UserCart        []ProductUser      `json:"usercart" bson:"usercart"`
-	Address_Details []ProductUser      `json:"address" bson:"address"`
+	Address_Details []Address          `json:"address" bson:"address"`
 	Order_Status    []Order            `json:"orders" bson:"orders"`
 }
 
